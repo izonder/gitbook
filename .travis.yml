@@ -1,0 +1,16 @@
+sudo: required
+
+language: c
+
+services:
+  - docker
+
+before_install:
+  - docker info
+  - docker build --no-cache -t izonder/gitbook .
+
+script:
+  - docker run -it --rm izonder/gitbook gitbook --version
+
+after_success:
+  - curl -X POST https://registry.hub.docker.com/u/izonder/gitbook/trigger/$DOCKER_TRIGGER_TOKEN/
