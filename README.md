@@ -1,6 +1,6 @@
-# gitbook
+# GitBook
 
-Docker image based on [ANNY](https://hub.docker.com/r/izonder/anny)
+Docker GitBook image based on [izonder/anny](https://hub.docker.com/r/izonder/anny)
 
 [![](https://images.microbadger.com/badges/version/izonder/gitbook.svg)](https://microbadger.com/images/izonder/gitbook "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/izonder/gitbook.svg)](https://microbadger.com/images/izonder/gitbook "Get your own image badge on microbadger.com")
