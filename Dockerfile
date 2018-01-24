@@ -16,7 +16,7 @@ RUN set -x \
 ##############################################################################
 
     && yarn global add gitbook-cli --prefix /usr/local \
-    && gitbook init \
+    && gitbook init \ # this `gitbook init` will install all packages
 
 ##############################################################################
 # Clean up
@@ -33,4 +33,4 @@ RUN set -x \
 ##############################################################################
 
 EXPOSE 80
-CMD ["gitbook", "serve"]
+CMD gitbook init && gitbook serve # this `gitbook init` will check and generate README.md and SUMMARY.md if they don't exist
